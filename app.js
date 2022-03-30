@@ -1,13 +1,3 @@
-// Makes use of the Universal Analytics API 'ga' object
-document.addEventListener('DOMContentLoaded', function(){
-  $(document).ready( function() {
-      ga(function(tracker) {
-        var clientId = tracker.get('clientId');
-        $("#cid").val("'" + clientId);
-      });
-    });
-});
-  
   // gclid parsing from url
   function getQueryVariable(variable) {
     var query = window.location.search.substring(1);
