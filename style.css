@@ -232,13 +232,27 @@ svg {
   row-gap: var(--ui-gap-cta);
 }
 
-#test {
-  background-color: var(--ui-color-n-300);
+#test, #demo-button {
   color: black;
   padding: 10px 17.5px;
   text-decoration: none;
   border-radius: 30px;
   opacity: 1;
+  background-image: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	animation: gradient 15s ease infinite;
+  background-size: 400% 400%;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 #test:hover {
@@ -349,7 +363,7 @@ input[type=text], input[type=email], input[type=submit], .button-input, select {
 
 .bar1, .bar2, .bar3 {
   width: 35px;
-  height: 4px;
+  height: 2px;
   background-color: rgb(255, 255, 255);
   margin: 7px 0;
   transition: 0.4s;
@@ -405,6 +419,18 @@ input[type=text], input[type=email], input[type=submit], .button-input, select {
   padding-top: 8rem;
   text-align: center;
   background-image: url('img/background_hero.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  height: auto;
+}
+
+.ui-section-hero-blog {
+  padding-bottom: 5rem;
+  padding-top: 8rem;
+  text-align: center;
+  background-image: url('img/pattern.svg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -479,6 +505,10 @@ input[type=text], input[type=email], input[type=submit], .button-input, select {
   border-radius: 5px;
 }
 
+.ui-component-list--item-check {
+  background-image: url(img/check.svg);
+}
+
 /*--------------------------------------------------------------
 |
 | 7.5 TEST
@@ -487,9 +517,10 @@ input[type=text], input[type=email], input[type=submit], .button-input, select {
 
 .ui-section-test {
   height: auto;
-  background-image: url(img/background_hero.webp);
+  background-image: url(img/pattern_demo.svg);
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
   padding: 10%;
 }
 
@@ -624,7 +655,8 @@ summary::-webkit-details-marker {
   padding-top: 10%;
   padding-left: 10%;
   padding-right: 10%;
-  background-image: linear-gradient(black, var(--ui-color-brand));
+  background-image: url(img/pattern_demo.svg);
+  background-size: cover;
 }
 
 .right {
@@ -699,6 +731,10 @@ code {
   padding: 2px;
   font-size: 105%;
   word-break: break-word;
+}
+
+pre {
+  white-space: pre-wrap;
 }
 
 /*--------------------------------------------------------------
